@@ -1,5 +1,6 @@
 package hu.diplomatervezes.client.ui;
 
+import hu.diplomatervezes.client.ui.decor.MenuHeader;
 import hu.diplomatervezes.shared._SimpleDataBase;
 import hu.diplomatervezes.shared._SimpleSchoolClass;
 import hu.diplomatervezes.shared._SimpleStudent;
@@ -45,7 +46,8 @@ public class Layout extends Composite {
 					st.setWidget(row, 0, new Label(row+1 + ". " + student.getFirstName() + " " + student.getLastName()));
 					++row;
 				}
-			menu.add(sc, schoolClass.getGrade(), 30);
+			//menu.add(sc, schoolClass.getGrade(), 30);
+			menu.add(sc, new MenuHeader(schoolClass.getGrade()), 30);
 			
 		}
 	}
