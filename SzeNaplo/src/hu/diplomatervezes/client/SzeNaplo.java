@@ -9,15 +9,12 @@ public class SzeNaplo implements EntryPoint {
 
 	@Override
 	public void onModuleLoad() {
-		// TODO Auto-generated method stub
 		RootLayoutPanel.get().add(new Layout());
 		scroll();
 		System.out.println();
 	}
 	
-	
-	public static native void scroll()
-	/*-{
+	public static native void scroll()	/*-{
 	$wnd.$('.tesztScroll').jScrollPane();	
 }-*/;
 }
