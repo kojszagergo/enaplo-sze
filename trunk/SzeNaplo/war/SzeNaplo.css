@@ -1,1 +1,101 @@
 /** Add css rules here for your application. */
+body {
+	font: 12px Arial, sans-serif;
+	line-height: 22px;
+	color: #414141;
+	background:#0072bc url(../images/pgbg.png) top left repeat-x;
+}
+
+html, body {
+
+	color:#666666;
+}
+
+.gwt-StackLayoutPanel {
+        border: none;
+        margin: 20px;
+              
+}
+.gwt-StackLayoutPanel .gwt-StackLayoutPanelHeader {
+	font: 12px/22px Arial,sans-serif!important;
+	border: none;
+	border-bottom: 1px solid #EBEBEB!important;
+	background: none;
+	cursor: pointer;
+	cursor: hand;
+  	padding: 7px 0;
+    background-color: #fff;
+    color: #222222;
+    display: block;
+    line-height: 14px;
+    margin: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.gwt-StackLayoutPanel .gwt-StackLayoutPanelHeader-hovering {
+	border: none;
+	color: #0072BC;
+}
+.gwt-StackLayoutPanel .gwt-StackLayoutPanelContent {
+  border: none;   
+  background: white;
+  padding: 2px 2px 10px 5px;
+}
+
+/* Headers */
+h1,h2, h3, h4, h5, h6{
+	font-family: 'Myriad Pro', Arial, sans-serif;
+	padding-top: 11px;
+	font-weight: normal;
+	letter-spacing: -1px;
+}
+h2, h3, h4, h5, h6{
+	padding-bottom: 4px;
+}
+h1{
+	font-size: 30px;
+	color: #0072bc;	
+}
+h1 span{
+	font-size: 20px;
+	padding-left: 15px;
+	color: #ccc;
+}
+
+h2{
+	font-size: 26px;
+	color: #262626;
+}
+h3{
+	font-size: 20px;
+	color: #0073a9;	
+}
+h4{
+	font-size: 20px;
+	font-size: #333;	
+}
+h5{
+	font-size: 18px;
+	font-size: #666;	
+}
+h6{
+	font-size: 16px;
+	font-size: #999;
+}
+
+p{
+	margin:5px 0;
+	line-height:18px;
+}
+
+.lofasz {
+	border-left: 2px solid #0072BC!important;
+	overflow-y: scroll!important;
+	background-color: red!important;
+}
+
+.tesztScroll {
+	width: 233px;
+	height: auto;
+	overflow: auto;
+}
