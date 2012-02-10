@@ -11,7 +11,7 @@ public class SzeNaplo implements EntryPoint {
 	public void onModuleLoad() {
 		RootLayoutPanel.get().add(new Layout());
 		scroll();
-		System.out.println();
+		System.out.println("World");
 	}
 	
 	public static native void scroll()	/*-{
