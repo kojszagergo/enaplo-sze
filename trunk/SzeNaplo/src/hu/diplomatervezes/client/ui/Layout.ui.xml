@@ -1,0 +1,60 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	.topPanel {
+		background: url("../images/top_bg.png") repeat-x scroll 0 0 transparent;
+		width: 100%;
+		height: 100%;
+		position:absolute;
+		position:fixed;
+		z-index:3;
+	}
+	
+	.leftPanel {
+		background: url("../images/left_bg.png") repeat-y scroll left top transparent;
+		margin-left: 50px;
+		width: 280px;
+		height: 100%;
+		position: fixed;
+	}
+	
+	.menuContener {
+		margin-top: 40px;
+		background-color: #fff;
+		width: 280px;
+		height: auto;
+
+	}
+	
+	.mainPanel {
+		background-color: #fff;
+		margin-top: 40px;
+		margin-left: 1px;
+		padding: 20px;
+		width: 640px;
+		height: auto;
+		position: relative;
+	}
+	</ui:style>
+	
+	<g:DockLayoutPanel unit="PX">
+		<g:north size="30">
+			<g:HorizontalPanel styleName="{style.topPanel}" ui:field="topPanel">
+				<g:Label>Hello North!&#9824;</g:Label>
+			</g:HorizontalPanel>
+		</g:north>
+		<g:west size="330">
+			<g:VerticalPanel styleName="{style.leftPanel}" ui:field="leftPanel">
+				<g:VerticalPanel styleName="{style.menuContener}">
+					<g:StackLayoutPanel unit="PX" ui:field="menu"></g:StackLayoutPanel>
+				</g:VerticalPanel>
+			</g:VerticalPanel>
+		</g:west>
+		<g:center>
+			<g:VerticalPanel styleName="{style.mainPanel}" ui:field="mainPanel">
+				<g:Label>Hello center</g:Label>
+			</g:VerticalPanel>
+		</g:center>
+	</g:DockLayoutPanel>
+</ui:UiBinder> 
