@@ -12,6 +12,7 @@ public class SzeNaplo implements EntryPoint {
 		// TODO Auto-generated method stub
 		RootLayoutPanel.get().add(new Layout());
 		scroll();
+		System.out.println();
 	}
 	
 	
