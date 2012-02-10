@@ -15,7 +15,8 @@ public class SzeNaplo implements EntryPoint {
 	}
 	
 	
-	public static native void scroll() /*-{
+	public static native void scroll()
+	/*-{
 	$wnd.$('.tesztScroll').jScrollPane();	
 }-*/;
 }
