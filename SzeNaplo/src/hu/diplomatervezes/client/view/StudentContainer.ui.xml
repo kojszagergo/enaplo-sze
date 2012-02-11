@@ -1,0 +1,17 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	.scrollContainer {
+		background-color: yellow!important;
+		height: inherit;
+		width: 240px;
+		padding: 0px;
+		margin: 20px;
+	}
+
+	</ui:style>
+			<g:ScrollPanel ui:field="scrollPanel">
+				<g:FlexTable ui:field="studentTable"></g:FlexTable>
+			</g:ScrollPanel>
+	</ui:UiBinder> 
