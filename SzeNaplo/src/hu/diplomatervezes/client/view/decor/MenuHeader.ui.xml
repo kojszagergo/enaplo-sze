@@ -3,9 +3,7 @@
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
 		.label {
-			padding-left: 30px;
-			padding-bottom: 20px;
-			vertical-align: middle;
+			padding-left: 5px;
 		}
 	</ui:style>
 	<g:HTMLPanel>
