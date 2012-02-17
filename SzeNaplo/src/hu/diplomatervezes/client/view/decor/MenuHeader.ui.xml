@@ -4,12 +4,13 @@
 	<ui:style>
 		.label {
 			padding-left: 5px;
+			text-decoration: none!important;
 		}
 	</ui:style>
 	<g:HTMLPanel>
 		<g:HorizontalPanel>
 			<g:Image url="/images/icons/osztaly.png"></g:Image>
-			<g:Label styleName="{style.label}" ui:field="className"></g:Label>
+			<g:Label styleName="{style.label}" ui:field="className">></g:Label>
 		</g:HorizontalPanel>
 	</g:HTMLPanel>
 </ui:UiBinder> 
