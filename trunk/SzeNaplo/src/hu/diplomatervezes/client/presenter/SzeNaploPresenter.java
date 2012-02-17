@@ -1,6 +1,7 @@
 package hu.diplomatervezes.client.presenter;
 
 import hu.diplomatervezes.client.StudentServiceAsync;
+import hu.diplomatervezes.client.view.MainLayout;
 
 import com.google.gwt.event.shared.HandlerManager;
 import com.google.gwt.user.client.ui.HasWidgets;
@@ -12,7 +13,6 @@ public class SzeNaploPresenter implements Presenter {
 	private final HandlerManager eventBus;
 	// Korabban Display interface-t implementalo UI widget. ez változni fog
 	private Widget view;
-	
 	
 	public SzeNaploPresenter(StudentServiceAsync rpcService, HandlerManager eventBus, Widget view) {
 		this.rpcService = rpcService;
