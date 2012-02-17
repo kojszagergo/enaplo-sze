@@ -1,0 +1,18 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.menuContener {
+			margin-top: 40px;
+			background-color: #fff;
+			width: 280px;
+			height: auto;
+	
+		}
+	</ui:style>
+	
+	<g:VerticalPanel styleName="{style.menuContener}">
+		<g:StackLayoutPanel unit="PX" ui:field="studentListPanel"></g:StackLayoutPanel>
+		<g:Button ui:field="tesztButton" text="abc"></g:Button>
+	</g:VerticalPanel>
+</ui:UiBinder> 

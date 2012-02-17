@@ -1,0 +1,29 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.container {
+			background-color: #fff;
+		}
+	</ui:style>
+	
+	<g:VerticalPanel styleName="{style.container}">
+		<g:HorizontalPanel ui:field="studentDetailHeader">
+			<g:Label ui:field="nameLabel" text="13. Kojsza Gergely"></g:Label>
+			<g:ListBox/>
+			<g:PushButton text="SETTINGS" styleName="gwt-SettingshButton"/>
+		</g:HorizontalPanel>
+		
+		
+		<g:HorizontalPanel>
+			<g:VerticalPanel ui:field="studentDetailLeft">
+				<g:PushButton text="JEGYBEÍRÁS"/>
+				<g:Label text="ÉRDEMJEGYEK"/>
+				<g:FlexTable ui:field="studentCredits"/></g:VerticalPanel>
+			<g:VerticalPanel ui:field="studentDetailRight"></g:VerticalPanel>
+		</g:HorizontalPanel>
+		<g:VerticalPanel ui:field="studentDetailFooter">
+			<g:FlexTable ui:field="privateData"/></g:VerticalPanel>
+	</g:VerticalPanel>
+	
+</ui:UiBinder> 
