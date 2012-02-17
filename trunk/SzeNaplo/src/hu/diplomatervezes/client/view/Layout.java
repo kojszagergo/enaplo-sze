@@ -47,7 +47,7 @@ public class Layout extends Composite {
 					++row;
 				}
 			//menu.add(sc, schoolClass.getGrade(), 30);
-			menu.add(sc, new MenuHeader(schoolClass.getGrade() + " Osztály"), 30);
+			//menu.add(sc, new MenuHeader(schoolClass.getGrade() + " Osztály"), 30);
 			
 		}
 	}
