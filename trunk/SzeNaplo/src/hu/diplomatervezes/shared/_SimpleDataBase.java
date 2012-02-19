@@ -34,7 +34,9 @@ public class _SimpleDataBase {
 	      "Wesley", "Gordon", "Dean", "Greg", "Jorge", "Dustin", "Pedro", "Derrick",
 	      "Dan", "Lewis", "Zachary", "Corey", "Herman", "Maurice", "Vernon",
 	      "Roberto", "Clyde", "Glen", "Hector", "Shane", "Ricardo", "Sam", "Rick",
-	      "Lester", "Brent", "Ramon", "Charlie", "Tyler", "Gilbert", "Gene"};
+	      "Lester", "Brent", "Ramon", "Charlie", "Tyler", "Gilbert", "Gene",
+	      "Gábor", "László", "Tibor", "Péter", "Rajmund", "Miklós", "Balázs", "Norber",
+	      "Tamás", "Dániel", "Dénes", "Gergely", "Csaba", };
 	  
 	  private static final String[] LAST_NAMES = {
 	      "Smith", "Johnson", "Williams", "Jones", "Brown", "Davis", "Miller",
@@ -65,7 +67,11 @@ public class _SimpleDataBase {
 	      "Olson", "Carroll", "Duncan", "Snyder", "Hart", "Cunningham", "Bradley",
 	      "Lane", "Andrews", "Ruiz", "Harper", "Fox", "Riley", "Armstrong",
 	      "Carpenter", "Weaver", "Greene", "Lawrence", "Elliott", "Chavez", "Sims",
-	      "Austin", "Peters", "Kelley", "Franklin", "Lawson"};	  
+	      "Austin", "Peters", "Kelley", "Franklin", "Lawson", "Szép", "Kojsza",
+	      "Horváth", "Tóth", "Nagy", "Kis", "Kiss", "Magyar", "Kálai", "Lakatos",
+	      "Kovács", "Fehér", "Fekete", "Orbán", "Kásás", "Benedek", "Kemény",
+	      "Szívós", "Madaras", "Fodor", "Dala", "Vincze", "Szécsi", "Steinmetz",
+	      "D. Nagy", "Hárai", "Biros", "Baksa", "Hegedüs", "Varga", "Varga2"};	  
 	  
 	  private static final String[] CLASS = {
 		  "9A", "10A", "11A", "12A",
@@ -121,7 +127,7 @@ public class _SimpleDataBase {
 		_SimpleSchoolClass schoolClass = new _SimpleSchoolClass();
 		schoolClass.setGrade(CLASS[classNr]);
 		schoolClass.setId(schoolClass.getGrade());
-		schoolClass.setStudentList(generateStudent(20));
+		schoolClass.setStudentList(generateStudent(Random.nextInt(20)));
 		
 		return schoolClass;
 	}

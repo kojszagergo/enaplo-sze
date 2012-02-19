@@ -17,7 +17,7 @@
 		
 		<g:HorizontalPanel>
 			<g:VerticalPanel ui:field="studentDetailLeft">
-				<g:PushButton text="JEGYBEÍRÁS"/>
+				<g:PushButton text="JEGYBEÍRÁS" ui:field="newButton"/>
 				<g:Label text="ÉRDEMJEGYEK"/>
 				<g:FlexTable ui:field="studentCredits"/></g:VerticalPanel>
 			<g:VerticalPanel ui:field="studentDetailRight"></g:VerticalPanel>

@@ -1,12 +1,16 @@
 package hu.diplomatervezes.client.view.decor;
 
 
+import hu.diplomatervezes.client.place.StudentDetailPlace;
+import hu.diplomatervezes.client.view.StudentListView.Presenter;
+
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.Widget;
 
 public class MenuHeader extends Composite {
@@ -21,10 +25,18 @@ public class MenuHeader extends Composite {
 		initWidget(uiBinder.createAndBindUi(this));
 	}
 
-	@UiField Label className;
+	private Presenter presenter;
+	@UiField Anchor toStudentClassPage;
 
-	public MenuHeader(String headerName) {
+	public MenuHeader(Presenter presenter, String headerName) {
 		initWidget(uiBinder.createAndBindUi(this));
-		className.setText(headerName);
+		this.presenter = presenter; 
+		toStudentClassPage.setText(headerName);
+	}
+	
+	@UiHandler("toStudentClassPage")
+	void onClick(ClickEvent e) {
+		//Window.alert("Clicked " + toStudentClassPage.getText());
+		presenter.onClassSelected(toStudentClassPage.getText());
 	}
 }

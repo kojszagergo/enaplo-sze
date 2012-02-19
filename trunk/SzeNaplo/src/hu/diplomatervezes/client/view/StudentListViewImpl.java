@@ -1,6 +1,8 @@
 package hu.diplomatervezes.client.view;
 
+import hu.diplomatervezes.client.SzeNaplo;
 import hu.diplomatervezes.client.place.StudentDetailPlace;
+import hu.diplomatervezes.client.place.StudentListPlace;
 import hu.diplomatervezes.client.view.decor.MenuHeader;
 import hu.diplomatervezes.shared._SimpleDataBase;
 import hu.diplomatervezes.shared._SimpleSchoolClass;
@@ -19,7 +21,7 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.user.client.ui.StackLayoutPanel;
 
-public class StudentListViewImpl extends Composite implements StudentListView{
+public class StudentListViewImpl extends Composite implements StudentListView {
 
 	private static StudentListViewImplUiBinder uiBinder = GWT
 			.create(StudentListViewImplUiBinder.class);
@@ -35,12 +37,10 @@ public class StudentListViewImpl extends Composite implements StudentListView{
 		
 		studentListPanel.setHeight("600px");
 		
-		
 	}
 
 	@Override
 	public void setStudentList(_SimpleDataBase students) {
-		// TODO Auto-generated method stub
 		
 		for (_SimpleSchoolClass schoolClass : students.getIskolaOsztalyok()) {
 			StudentContainer sc = new StudentContainer();
@@ -53,8 +53,7 @@ public class StudentListViewImpl extends Composite implements StudentListView{
 					st.setWidget(row, 0, new Label(row+1 + ". " + student.getFirstName() + " " + student.getLastName()));
 					++row;
 				}
-			//menu.add(sc, schoolClass.getGrade(), 30);
-			studentListPanel.add(sc, new MenuHeader(schoolClass.getGrade()), 30);
+			studentListPanel.add(sc, new MenuHeader(presenter, schoolClass.getGrade()), 30);
 		}
 	}
 
@@ -65,8 +64,8 @@ public class StudentListViewImpl extends Composite implements StudentListView{
 	
 	@UiHandler("tesztButton")
 	void onClick(ClickEvent e) {
-		Window.alert(tesztButton.getText());
-		tesztButton.setText(tesztButton.getText() + tesztButton.getText());
-		presenter.goTo(new StudentDetailPlace(tesztButton.getText()));
+		//Window.alert(tesztButton.getText());
+		tesztButton.setText(tesztButton.getText());
+		presenter.onClassSelected(tesztButton.getText());
 	}
 }
