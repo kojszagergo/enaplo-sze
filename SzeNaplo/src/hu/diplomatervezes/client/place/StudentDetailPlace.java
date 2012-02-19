@@ -1,9 +1,9 @@
 package hu.diplomatervezes.client.place;
 
-import com.google.gwt.place.shared.Place;
 import com.google.gwt.place.shared.PlaceTokenizer;
+import com.google.gwt.place.shared.Prefix;
 
-public class StudentDetailPlace extends Place {
+public class StudentDetailPlace extends StudentPlace {
 	
 	private String name;
 	
@@ -15,6 +15,7 @@ public class StudentDetailPlace extends Place {
 		return name;
 	}
 	
+	@Prefix("contact")
 	public static class Tokenizer implements PlaceTokenizer<StudentDetailPlace> {
 
 		@Override

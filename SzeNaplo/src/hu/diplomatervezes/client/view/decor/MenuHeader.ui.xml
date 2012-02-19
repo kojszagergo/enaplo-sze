@@ -10,7 +10,7 @@
 	<g:HTMLPanel>
 		<g:HorizontalPanel>
 			<g:Image url="/images/icons/osztaly.png"></g:Image>
-			<g:Label styleName="{style.label}" ui:field="className">></g:Label>
+			<g:Anchor styleName="{style.label}" ui:field="toStudentClassPage"></g:Anchor>
 		</g:HorizontalPanel>
 	</g:HTMLPanel>
 </ui:UiBinder> 

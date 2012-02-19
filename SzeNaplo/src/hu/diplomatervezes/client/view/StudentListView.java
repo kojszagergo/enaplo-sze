@@ -10,6 +10,6 @@ public interface StudentListView extends IsWidget{
 	void setPresenter(Presenter presenter);
 	
 	public interface Presenter {
-		void goTo(Place place);
+		void onClassSelected(String osztaly);
 	}
 }

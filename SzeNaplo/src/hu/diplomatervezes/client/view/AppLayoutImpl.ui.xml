@@ -33,16 +33,16 @@
 	</ui:style>
 	<g:DockLayoutPanel unit="PX">
 		<g:north size="30">
-			<g:HorizontalPanel styleName="{style.topPanel}" ui:field="topPanel">
-			</g:HorizontalPanel>
+			<g:SimplePanel styleName="{style.topPanel}" ui:field="topPanel">
+			</g:SimplePanel>
 		</g:north>
 		<g:west size="330">
-			<g:VerticalPanel styleName="{style.leftPanel}" ui:field="leftPanel">
-			</g:VerticalPanel>
+			<g:SimplePanel styleName="{style.leftPanel}" ui:field="leftPanel">
+			</g:SimplePanel>
 		</g:west>
 		<g:center>
-			<g:VerticalPanel styleName="{style.mainPanel}" ui:field="centerPanel">
-			</g:VerticalPanel>
+			<g:SimplePanel styleName="{style.mainPanel}" ui:field="centerPanel">
+			</g:SimplePanel>
 		</g:center>
 	
 	
