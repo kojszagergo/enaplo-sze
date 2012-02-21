@@ -127,7 +127,7 @@ public class _SimpleDataBase {
 		_SimpleSchoolClass schoolClass = new _SimpleSchoolClass();
 		schoolClass.setGrade(CLASS[classNr]);
 		schoolClass.setId(schoolClass.getGrade());
-		schoolClass.setStudentList(generateStudent(Random.nextInt(20)));
+		schoolClass.setStudentList(generateStudent(30));
 		
 		return schoolClass;
 	}
