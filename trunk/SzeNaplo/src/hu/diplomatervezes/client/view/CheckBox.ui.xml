@@ -1,0 +1,43 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:d="urn:import:com.google.gwt.dom.client">
+	<ui:style type="hu.diplomatervezes.client.view.CheckBox.CbStyle">
+	.Main{	
+		width: 11px;
+		height: 11px;
+		
+		background-color: rgba(255, 255, 255, 0.05);
+		border: 1px solid rgba(155, 155, 155, 0.57);
+		border-radius: 1px 1px 1px 1px;
+		display: inline-block;
+	}
+	.Main:hover{
+		width: 11px;	
+		height: 11px;
+		
+		background-color: rgba(255, 255, 255, 0.05);
+		border: 1px solid #B2B2B2;
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+		border-radius: 1px 1px 1px 1px;
+		display: inline-block;
+	}	
+	.unChecked {
+		display: none;
+	}
+	.checked {
+	
+		width: 15px;	
+		height: 15px;
+		
+		background-attachment: scroll;
+		background-image: url("/images/checkmark.png");
+		background-color: rgba(255, 255, 255, 0.65);
+		background-position: -5px -3px;
+		
+
+	}
+	</ui:style>
+	<g:HTMLPanel styleName="{style.Main}" ui:field="checkBox">
+		<Div></Div>
+	</g:HTMLPanel>
+</ui:UiBinder> 
