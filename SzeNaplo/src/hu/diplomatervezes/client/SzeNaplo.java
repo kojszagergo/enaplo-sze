@@ -51,7 +51,7 @@ public class SzeNaplo implements EntryPoint {
 		
 		historyHandler.handleCurrentHistory();
 		
-		scroll();
+		//scroll();
 	}
 	
 	public static native void scroll()	/*-{
