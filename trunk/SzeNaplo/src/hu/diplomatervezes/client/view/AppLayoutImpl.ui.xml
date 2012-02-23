@@ -28,7 +28,8 @@
 		width: 640px;
 		height: auto;
 		position: relative;
-	}	
+		border-top-right-radius: 2px;
+		}	
 		
 	</ui:style>
 	<g:DockLayoutPanel unit="PX">
