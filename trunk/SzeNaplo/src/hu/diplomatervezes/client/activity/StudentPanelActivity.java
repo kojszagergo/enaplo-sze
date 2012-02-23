@@ -33,4 +33,9 @@ public class StudentPanelActivity extends AbstractActivity implements StudentLis
 	public void onClassSelected(String osztaly) {
 		placeController.goTo(new StudentDetailPlace(osztaly));
 	}
+
+	@Override
+	public void onStudentSelected(String id) {
+		placeController.goTo(new StudentDetailPlace(id));		
+	}
 }
