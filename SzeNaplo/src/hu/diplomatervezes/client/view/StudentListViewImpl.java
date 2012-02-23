@@ -8,8 +8,10 @@ import hu.diplomatervezes.shared._SimpleStudent;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Element;
+import com.google.gwt.dom.client.Style;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.resources.client.CssResource;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
@@ -30,7 +32,15 @@ public class StudentListViewImpl extends Composite implements StudentListView {
 
 	interface StudentListViewImplUiBinder extends UiBinder<Widget, StudentListViewImpl> {
 	}
+	
+	interface RowStyle extends CssResource {
+		String selected();
+		String unselected();
+	}
+	
+	private int lastSelected = -1;
 	private Presenter presenter; 
+	@UiField RowStyle style;
 	@UiField StackLayoutPanel studentListPanel;
 	@UiField Button tesztButton;
 
@@ -58,12 +68,31 @@ public class StudentListViewImpl extends Composite implements StudentListView {
 					// TODO Auto-generated method stub
 					Cell cell = st.getCellForEvent(event);
 					Element e = cell.getElement();
+					
 					if (cell.getCellIndex() == 0) {
-						//Window.alert(cell.getCellIndex() + " " + cell.getRowIndex());
 						CheckBox w = (CheckBox)st.getWidget(cell.getRowIndex(), 0);
+						System.out.println(cell.getCellIndex()+" fdgfd");
 						if (w.isChecked())
 							w.setUnChecked();
 						else w.setChecked();
+					} else {
+						int row = cell.getRowIndex();
+						
+						
+						if (lastSelected >= 0) {
+							st.getRowFormatter().removeStyleName(lastSelected, style.selected());
+							st.getRowFormatter().setStyleName(row, style.selected());
+							System.out.println(lastSelected);
+							lastSelected = row;
+							System.out.println(lastSelected);
+						} else {
+							System.out.println(lastSelected);
+							st.getRowFormatter().setStyleName(row, style.selected());
+							lastSelected = row;
+						}
+						
+						Label lbl = (Label) st.getWidget(row, 1);
+						presenter.onStudentSelected(lbl.getText());
 					}
 				}
 			});

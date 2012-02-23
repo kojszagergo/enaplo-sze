@@ -11,5 +11,6 @@ public interface StudentListView extends IsWidget{
 	
 	public interface Presenter {
 		void onClassSelected(String osztaly);
+		void onStudentSelected(String id);
 	}
 }

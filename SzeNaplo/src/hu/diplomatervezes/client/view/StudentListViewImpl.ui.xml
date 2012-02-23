@@ -1,13 +1,25 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
-	<ui:style>
+	<ui:style type="hu.diplomatervezes.client.view.StudentListViewImpl.RowStyle">
 		.menuContener {
 			margin-top: 40px;
 			background-color: #fff;
 			width: 280px;
 			height: auto;
 	
+		}
+		
+		.selected {
+			background-color: #ffffcc;
+			color: fuchsia;
+			padding: 11px!important;
+			font-size: 16pt;
+		}
+		
+		.unselected {
+			background-color: #fff;
+
 		}
 	</ui:style>
 	
