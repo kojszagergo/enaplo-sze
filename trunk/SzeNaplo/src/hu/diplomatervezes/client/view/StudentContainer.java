@@ -1,7 +1,11 @@
 package hu.diplomatervezes.client.view;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.user.client.ui.CheckBox;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.uibinder.client.UiField;
@@ -15,13 +19,18 @@ public class StudentContainer extends Composite {
 	
 	@UiField FlexTable studentTable;
 	@UiField ScrollPanel scrollPanel;
+	private Map<Integer, CheckBox> selectedCheckBox = new HashMap<Integer, CheckBox>();
 
 	interface StudentContainerUiBinder extends
 			UiBinder<Widget, StudentContainer> {
 	}
-
+	
 	public StudentContainer() {
 		initWidget(uiBinder.createAndBindUi(this));
+	}
+	
+	public Map<Integer, CheckBox> getSelectedCheckBox() {
+		return selectedCheckBox;
 	}
 	
 	public FlexTable getStudentTable() {
