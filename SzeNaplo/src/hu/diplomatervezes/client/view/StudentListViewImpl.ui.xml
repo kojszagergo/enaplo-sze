@@ -3,11 +3,16 @@
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style type="hu.diplomatervezes.client.view.StudentListViewImpl.RowStyle">
 		.menuContener {
-			margin-top: 40px;
 			background-color: #fff;
 			width: 280px;
 			height: auto;
 	
+		}
+		
+		.menuButtonContainer {
+			height: 40px;
+			width: 280px;
+
 		}
 		
 		.selected {
@@ -22,9 +27,12 @@
 
 		}
 	</ui:style>
-	
-	<g:VerticalPanel styleName="{style.menuContener}">
-		<g:StackLayoutPanel unit="PX" ui:field="studentListPanel"></g:StackLayoutPanel>
-		<g:Button ui:field="tesztButton" text="abc"></g:Button>
+	<g:VerticalPanel>
+		<g:HorizontalPanel ui:field="menuButtonContainer" styleName="{style.menuButtonContainer}">
+			<g:Label>Hello</g:Label>
+		</g:HorizontalPanel>
+		<g:VerticalPanel styleName="{style.menuContener}">	
+			<g:StackLayoutPanel unit="PX" ui:field="studentListPanel"></g:StackLayoutPanel>
+		</g:VerticalPanel>
 	</g:VerticalPanel>
 </ui:UiBinder> 

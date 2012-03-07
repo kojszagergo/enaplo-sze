@@ -12,6 +12,7 @@ public class ClientFactoryImpl implements ClientFactory {
 	private static final PlaceController placeController = new PlaceController(eventBus);
 	private static final StudentListView studentListView = new StudentListViewImpl();
 	private static final StudentDetailView studentDetailView = new StudentDetailViewImpl();
+	private static final TopPanelView topPanelView = new TopPanelViewImpl();
 	private static final TesztPanel tesztPanel = new TesztPanel();
 	
 	
@@ -39,6 +40,11 @@ public class ClientFactoryImpl implements ClientFactory {
 	@Override
 	public TesztPanel getTesztPanel(String name) {
 		return tesztPanel;
+	}
+
+	@Override
+	public TopPanelView getTopPanelView() {
+		return topPanelView;
 	}
 
 }

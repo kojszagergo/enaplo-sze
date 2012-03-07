@@ -6,11 +6,17 @@
 			padding-left: 5px;
 			text-decoration: none!important;
 		}
+		.headerButton {
+			padding: 0 5px;
+			height: 20px;
+		}
 	</ui:style>
 	<g:HTMLPanel>
-		<g:HorizontalPanel>
+		<g:HorizontalPanel verticalAlignment="middle" horizontalAlignment="center" height="30px">
 			<g:Image url="/images/icons/osztaly.png"></g:Image>
 			<g:Anchor styleName="{style.label}" ui:field="toStudentClassPage"></g:Anchor>
+			<g:PushButton ui:field="selectStudents_BT" visible="false" text="Hozzáad"></g:PushButton>
+			<g:PushButton ui:field="clearSelection_BT" visible="false" text="x"></g:PushButton>
 		</g:HorizontalPanel>
 	</g:HTMLPanel>
 </ui:UiBinder> 
