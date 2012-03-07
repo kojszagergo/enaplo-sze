@@ -10,6 +10,5 @@
 		<g:VerticalPanel>
 			<g:Label text="New Label" ui:field="studentName"/>
 		</g:VerticalPanel>
-		<g:VerticalPanel/>
 	</g:VerticalPanel>
 </ui:UiBinder> 
