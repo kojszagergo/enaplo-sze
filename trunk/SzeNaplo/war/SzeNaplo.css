@@ -13,7 +13,7 @@ html, body {
 
 .gwt-StackLayoutPanel {
         border: none;
-        margin: 20px;
+        margin: 20px 20px;
               
 }
 .gwt-StackLayoutPanel .gwt-StackLayoutPanelHeader {
@@ -23,11 +23,10 @@ html, body {
 	background: none;
 	cursor: pointer;
 	cursor: hand;
-  	padding: 7px 0;
+  	padding: 0 0;
     background-color: #fff;
     color: #222222;
     display: block;
-    line-height: 14px;
     margin: 0;
     text-decoration: none;
     text-transform: uppercase;
@@ -95,7 +94,12 @@ p{
 }
 
 .tesztScroll {
-	width: 233px;
-	height: auto;
-	overflow: auto;
+	width: 233px; /* width: 233px; */
+	height: auto; /* height: auto; */
+	overflow: auto; /* overflow: auto; */
+}
+.gwt-SettingshButton {
+	position: absolute;
+	top: 22px;
+	right: 65px;
 }

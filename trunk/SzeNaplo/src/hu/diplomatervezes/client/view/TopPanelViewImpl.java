@@ -1,12 +1,14 @@
 package hu.diplomatervezes.client.view;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.uibinder.client.UiHandler;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.PushButton;
 import com.google.gwt.user.client.ui.Widget;
-import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.Anchor;
 
 public class TopPanelViewImpl extends Composite implements TopPanelView {
 
@@ -17,27 +19,24 @@ public class TopPanelViewImpl extends Composite implements TopPanelView {
 			UiBinder<Widget, TopPanelViewImpl> {
 	}
 
-	@UiField Label loggedInUserFullName;
-	@UiField Anchor link;
+	@UiField PushButton loginButton;
+	String loginUrl;
 
 	
 	public TopPanelViewImpl() {
 		initWidget(uiBinder.createAndBindUi(this));
-		loggedInUserFullName.setText("defauld");
-	}
-
-	public String getLoggedInUserFullName() {
-		return loggedInUserFullName.getText();
-	}
-
-	public void setLoggedInUserFullName(String loggedInUserFullName) {
-		this.loggedInUserFullName.setText(loggedInUserFullName);
 	}
 
 	@Override
 	public void setLinkHref(String href) {
-		// TODO Auto-generated method stub
-		link.setHref(href);
+		loginUrl = href;
+	}
+	
+	@UiHandler("loginButton")
+	void onclick(ClickEvent e) {
+		Window.alert("Clicked!");
+		Window.Location.assign(loginUrl);
+		
 	}
 }
 

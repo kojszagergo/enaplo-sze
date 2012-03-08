@@ -7,7 +7,6 @@
 		}
 	</ui:style>
 	<g:HorizontalPanel>
-		<g:Label styleName="{style.important}" ui:field="loggedInUserFullName"/>
-		<g:Anchor ui:field="link" text="LoginOut"></g:Anchor>		
+		<g:PushButton ui:field="loginButton" text="Bejelentkezés"></g:PushButton>		
 	</g:HorizontalPanel>
 </ui:UiBinder> 
