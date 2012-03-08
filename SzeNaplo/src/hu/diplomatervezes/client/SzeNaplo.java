@@ -5,6 +5,7 @@ import hu.diplomatervezes.client.mvp.AppPlaceHistoryMapper;
 import hu.diplomatervezes.client.mvp.CachingLeftPanelActivityMapper;
 import hu.diplomatervezes.client.mvp.CenterPanelActivityMapper;
 import hu.diplomatervezes.client.mvp.TopPanelActivityMapper;
+import hu.diplomatervezes.client.place.StudentListPlace;
 import hu.diplomatervezes.client.place.TopPanelPlace;
 import hu.diplomatervezes.client.view.AppLayout;
 import hu.diplomatervezes.client.view.AppLayoutImpl;
@@ -17,6 +18,7 @@ import com.google.gwt.place.shared.Place;
 import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.place.shared.PlaceHistoryHandler;
 import com.google.gwt.user.client.rpc.AsyncCallback;
+import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 
 public class SzeNaplo implements EntryPoint {
@@ -33,7 +35,13 @@ public class SzeNaplo implements EntryPoint {
 			@Override
 			public void onSuccess(LoginInfo result) {
 				loginInfo = result;
-				defaultPlace = new TopPanelPlace(loginInfo);
+				
+				if (loginInfo.isLoggedIn())
+					
+					defaultPlace = new StudentListPlace();
+				else
+					defaultPlace = new TopPanelPlace(loginInfo);
+				
 				loadSzeNaplo();
 			}
 			
@@ -43,8 +51,6 @@ public class SzeNaplo implements EntryPoint {
 				
 			}
 		});
-		
-		
 	}
 
 	private void loadSzeNaplo() {
@@ -52,6 +58,7 @@ public class SzeNaplo implements EntryPoint {
 		EventBus eventBus = clientFactory.getEventBus();
 		
 		AppLayout appWidget = new AppLayoutImpl();
+		appWidget.getTopPanel().setWidget(new Anchor("Kijelentkezés", loginInfo.getLogoutUrl()));
 		
 		TopPanelActivityMapper topPanelActivityMapper = new TopPanelActivityMapper(clientFactory);
 		ActivityManager topPanelActivityManager = new ActivityManager(topPanelActivityMapper, eventBus);
