@@ -1,0 +1,25 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	.container {
+		padding-left: 50px;
+	}
+	.icon {
+		background-image: url("/images/checkmark.png");
+		background-repeat: no-repeat;
+
+	}
+	
+	</ui:style>
+	<g:HTMLPanel styleName="{style.container}">
+		<g:MenuBar autoOpen="false" animationEnabled="true" height="25px">
+			<g:MenuItem ui:field="mainMenu">
+				<g:MenuBar vertical="true">
+					<g:MenuItem text="Beállítások" ui:field="settings"></g:MenuItem>
+					<g:MenuItem text="Kijelentkezés" ui:field="logout"></g:MenuItem>
+				</g:MenuBar>
+			</g:MenuItem>
+		</g:MenuBar>
+	</g:HTMLPanel>
+</ui:UiBinder> 

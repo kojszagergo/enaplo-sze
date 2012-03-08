@@ -9,6 +9,7 @@ import hu.diplomatervezes.client.place.StudentListPlace;
 import hu.diplomatervezes.client.place.TopPanelPlace;
 import hu.diplomatervezes.client.view.AppLayout;
 import hu.diplomatervezes.client.view.AppLayoutImpl;
+import hu.diplomatervezes.client.view.UserPanelImpl;
 
 import com.google.gwt.activity.shared.ActivityManager;
 import com.google.gwt.core.client.EntryPoint;
@@ -58,7 +59,8 @@ public class SzeNaplo implements EntryPoint {
 		EventBus eventBus = clientFactory.getEventBus();
 		
 		AppLayout appWidget = new AppLayoutImpl();
-		appWidget.getTopPanel().setWidget(new Anchor("Kijelentkezés", loginInfo.getLogoutUrl()));
+		//appWidget.getTopPanel().setWidget(new Anchor("Kijelentkezés", loginInfo.getLogoutUrl()));
+		appWidget.getTopPanel().setWidget(new UserPanelImpl(loginInfo));
 		
 		TopPanelActivityMapper topPanelActivityMapper = new TopPanelActivityMapper(clientFactory);
 		ActivityManager topPanelActivityManager = new ActivityManager(topPanelActivityMapper, eventBus);
