@@ -6,7 +6,27 @@
          xmlns="http://java.sun.com/xml/ns/javaee">
 
   <!-- Servlets -->
+  <servlet>
+    <servlet-name>loginServlet</servlet-name>
+    <servlet-class>hu.diplomatervezes.server.LoginServiceImpl</servlet-class>
+  </servlet>
   
+  <servlet-mapping>
+    <servlet-name>loginServlet</servlet-name>
+    <url-pattern>/szenaplo/login</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>newsServlet</servlet-name>
+    <servlet-class>hu.diplomatervezes.server.NewsServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>newsServlet</servlet-name>
+    <url-pattern>/szenaplo/news</url-pattern>
+  </servlet-mapping>
+  
+    
   <!-- Default page to serve -->
   <welcome-file-list>
     <welcome-file>SzeNaplo.html</welcome-file>
