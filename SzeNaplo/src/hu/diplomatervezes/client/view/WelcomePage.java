@@ -8,4 +8,5 @@ import com.google.gwt.user.client.ui.IsWidget;
 
 public interface WelcomePage extends IsWidget{
 	void setnews(List<News> news);
+	void setNewsTest();
 }

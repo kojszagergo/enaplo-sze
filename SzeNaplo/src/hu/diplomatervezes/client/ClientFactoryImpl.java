@@ -14,6 +14,7 @@ public class ClientFactoryImpl implements ClientFactory {
 	private static final StudentDetailView studentDetailView = new StudentDetailViewImpl();
 	private static final TopPanelView topPanelView = new TopPanelViewImpl();
 	private static final TesztPanel tesztPanel = new TesztPanel();
+	private static final WelcomePage welcomePage = new WelcomePageImpl();
 	
 	
 
@@ -45,6 +46,11 @@ public class ClientFactoryImpl implements ClientFactory {
 	@Override
 	public TopPanelView getTopPanelView() {
 		return topPanelView;
+	}
+
+	@Override
+	public WelcomePage getWelcomePage() {
+		return welcomePage;
 	}
 
 }

@@ -4,22 +4,28 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
-import com.google.gwt.user.client.ui.UIObject;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.Widget;
 
-public class NewsItemImpl extends UIObject {
+public class NewsItemImpl extends Composite {
 
 	private static NewsItemImplUiBinder uiBinder = GWT
 			.create(NewsItemImplUiBinder.class);
 
-	interface NewsItemImplUiBinder extends UiBinder<Element, NewsItemImpl> {
+	interface NewsItemImplUiBinder extends UiBinder<Widget, NewsItemImpl> {
 	}
 
-	@UiField
-	Element headerDiv;
-	Element bodyDiv;
+	@UiField Element headerDiv;
+	@UiField Element bodyDiv;
 
 	public NewsItemImpl() {
-		setElement(uiBinder.createAndBindUi(this));
+		initWidget(uiBinder.createAndBindUi(this));
+	}
+	
+	public NewsItemImpl(String headerText, String bodyText) {
+		initWidget(uiBinder.createAndBindUi(this));
+		setHeader(headerText);
+		setBody(bodyText);
 	}
 	
 	public void setHeader(String headerText) {
