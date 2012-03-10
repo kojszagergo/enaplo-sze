@@ -23,7 +23,7 @@ public class MenuActivityMapper implements ActivityMapper {
 	public Activity getActivity(Place place) {
 		
 		if (place instanceof StudentListPlace) {
-			return new WelcomeActivity();
+			return new WelcomeActivity(clientFactory);
 			//return new StudentDetailActivity(null, clientFactory);
 		}
 		
