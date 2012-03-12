@@ -18,6 +18,8 @@
   
 
   <stylesheet src="../SzeNaplo.css" />
+  <stylesheet src="../MyMenu.css" />
+  
   <!-- Specify the app entry point class.                         -->
   <entry-point class='hu.diplomatervezes.client.SzeNaplo'/>
   
