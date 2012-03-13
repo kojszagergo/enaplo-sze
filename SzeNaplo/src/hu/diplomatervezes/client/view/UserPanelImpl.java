@@ -3,8 +3,10 @@ package hu.diplomatervezes.client.view;
 import java.awt.MenuComponent;
 
 import hu.diplomatervezes.client.LoginInfo;
+import hu.diplomatervezes.client.place.SettingsMenuPlace;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.Command;
@@ -31,10 +33,12 @@ public class UserPanelImpl extends Composite {
 	LoginInfo loginInfo;
 	Command cmdSettings;
 	Command cmdLogout;
+	PlaceController placeController;
 
-	public UserPanelImpl(LoginInfo loginInfo) {
+	public UserPanelImpl(LoginInfo loginInfo, PlaceController placeController) {
 		initWidget(uiBinder.createAndBindUi(this));
 		this.loginInfo = loginInfo;
+		this.placeController = placeController;
 		mainMenu.setText(this.loginInfo.getEmailAddress());
 		bindCommands();
 	}
@@ -49,7 +53,7 @@ public class UserPanelImpl extends Composite {
 		cmdSettings = new Command() {
 			@Override
 			public void execute() {
-				Window.alert("Settings");
+				placeController.goTo(new SettingsMenuPlace());
 			}
 		};
 		

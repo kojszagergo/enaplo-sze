@@ -19,7 +19,6 @@ import com.google.gwt.place.shared.Place;
 import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.place.shared.PlaceHistoryHandler;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 
 public class SzeNaplo implements EntryPoint {
@@ -60,7 +59,7 @@ public class SzeNaplo implements EntryPoint {
 		
 		AppLayout appWidget = new AppLayoutImpl();
 		//appWidget.getTopPanel().setWidget(new Anchor("Kijelentkezés", loginInfo.getLogoutUrl()));
-		appWidget.getTopPanel().setWidget(new UserPanelImpl(loginInfo));
+		appWidget.getTopPanel().setWidget(new UserPanelImpl(loginInfo, clientFactory.getPlaceController()));
 		
 		TopPanelActivityMapper topPanelActivityMapper = new TopPanelActivityMapper(clientFactory);
 		ActivityManager topPanelActivityManager = new ActivityManager(topPanelActivityMapper, eventBus);

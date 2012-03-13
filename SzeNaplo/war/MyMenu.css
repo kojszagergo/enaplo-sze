@@ -1,7 +1,7 @@
 .gwt-MenuBar {
   cursor: default;
   background: none;
-  width: 278px;
+  width: 278px!important;
 }
 .gwt-MenuBar .gwt-MenuItem {
   cursor: default;
@@ -29,7 +29,7 @@
 }
 .gwt-MenuBar-horizontal .gwt-MenuItem-selected {
 	color: #fff;
-	background-color: purple;
+	background-color: #65aa65;
 }
 
 .gwt-MenuBar-horizontal .gwt-MenuItemSeparator {
@@ -45,13 +45,15 @@
   background: white; 
 }
 .gwt-MenuBar-vertical {
-  padding: 15px 30px;
+  padding: 10px 20px;
   background: #fff;
   border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 .gwt-MenuBar-vertical table {
   border-collapse: collapse;
 }
+
 .gwt-MenuBar-vertical .gwt-MenuItem {
   padding: 2px 40px 2px 1px;
 }
@@ -87,54 +89,42 @@
 	display: none;
 }
 .gwt-MenuBarPopup .menuPopupTopLeftInner {
-  width: 5px;
-  height: 5px;
-  zoom: 1;
+	background-color: none;
 }
 .gwt-MenuBarPopup .menuPopupTopRightInner {
-  width: 8px;
-  height: 5px;
-  zoom: 1;
+	background-color: none;
 }
 .gwt-MenuBarPopup .menuPopupBottomLeftInner {
-  width: 5px;
-  height: 8px;
-  zoom: 1;
+	background-color: none;
 }
 .gwt-MenuBarPopup .menuPopupBottomRightInner {
-  width: 8px;
-  height: 8px;
-  zoom: 1;
+	background-color: none;
 }
 .gwt-MenuBarPopup .menuPopupTopLeft {
-	display: none;
+	background-color: none;
 }
 .gwt-MenuBarPopup .menuPopupTopRight {
-	display: none;
+	background-color: none;
+	background-image: none;	
 }
 .gwt-MenuBarPopup .menuPopupBottomLeft {
-	display: none;
+	background-color: none;
+	background-image: none;
 }
 .gwt-MenuBarPopup .menuPopupBottomRight {
-	display: none;
+	background-color: none;
+	background-image: none;
 }
 * html .gwt-MenuBarPopup .menuPopupTopLeftInner {
-  width: 5px;
-  height: 5px;
-  overflow: hidden;
+	background-color: none;
 }
 * html .gwt-MenuBarPopup .menuPopupTopRightInner {
-  width: 8px;
-  height: 5px;
-  overflow: hidden;
+	background-color: none;
 }
 * html .gwt-MenuBarPopup .menuPopupBottomLeftInner {
-  width: 5px;
-  height: 8px;
-  overflow: hidden;
+	background-color: none;
 }
 * html .gwt-MenuBarPopup .menuPopupBottomRightInner {
-  width: 8px;
-  height: 8px;
-  overflow: hidden;
+	background-color: none;
+	display: none;
 }

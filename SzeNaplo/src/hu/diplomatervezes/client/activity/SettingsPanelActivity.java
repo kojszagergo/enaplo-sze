@@ -1,6 +1,7 @@
 package hu.diplomatervezes.client.activity;
 
 import hu.diplomatervezes.client.ClientFactory;
+import hu.diplomatervezes.client.place.StudentListPlace;
 import hu.diplomatervezes.client.view.SettingsMenuView;
 
 import com.google.gwt.activity.shared.AbstractActivity;
@@ -35,5 +36,11 @@ public class SettingsPanelActivity extends AbstractActivity implements SettingsM
 	public void onClickEditAnnouncements() {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public void onClickBack() {
+		// TODO Auto-generated method stub
+		placeController.goTo(new StudentListPlace());
 	}
 }

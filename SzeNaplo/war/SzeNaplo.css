@@ -103,3 +103,136 @@ p{
 	top: 22px;
 	right: 65px;
 }
+
+
+/* Menü testre szabása */
+.gwt-MenuBar {
+  cursor: default;
+  background: none;
+  width: 278px!important;
+}
+.gwt-MenuBar .gwt-MenuItem {
+  cursor: default;
+  font-family: Arial Unicode MS, Arial, sans-serif;
+  width: 260px;
+}
+
+/* Fõmenü kijelölt menü */
+.gwt-MenuBar .gwt-MenuItem-selected {
+  background-color: rgba(0, 0, 0, 0.03);
+  color: #aaa;
+  cursor: pointer;
+}
+
+/* Fõmenü */
+.gwt-MenuBar-horizontal {
+	padding: 0px;
+	border: 1px solid #757575;
+}
+.gwt-MenuBar-horizontal .gwt-MenuItem {
+  color: #dedede;
+  font-weight: bold;
+  background-color: #565656;
+  line-height: 11px; 
+}
+.gwt-MenuBar-horizontal .gwt-MenuItem-selected {
+	color: #fff;
+	background-color: #65aa65;
+}
+
+.gwt-MenuBar-horizontal .gwt-MenuItemSeparator {
+  width: 1px;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  background: white;
+}
+.gwt-MenuBar-horizontal .gwt-MenuItemSeparator .menuSeparatorInner {
+  width: 1px;
+  height: 1px;
+  background: white; 
+}
+.gwt-MenuBar-vertical {
+  padding: 10px 20px;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.gwt-MenuBar-vertical table {
+  border-collapse: collapse;
+}
+
+.gwt-MenuBar-vertical .gwt-MenuItem {
+  padding: 2px 40px 2px 1px;
+}
+.gwt-MenuBar-vertical .gwt-MenuItemSeparator {
+  padding: 2px 0px;
+}
+.gwt-MenuBar-vertical .gwt-MenuItemSeparator .menuSeparatorInner {
+  height: 1px;
+  padding: 0px;
+  border: 0px;
+  border-top: 1px solid #ccc;
+  overflow: hidden;
+}
+.gwt-MenuBar-vertical .subMenuIcon {
+  padding-right: 4px;
+}
+.gwt-MenuBar-vertical .subMenuIcon-selected {
+  background: #E3E8F3;
+}
+.gwt-MenuBarPopup {
+  margin: 0px 0px 0px 3px;
+}
+.gwt-MenuBarPopup .menuPopupTopCenter {
+	display: none;
+}
+.gwt-MenuBarPopup .menuPopupBottomCenter {
+	display: none;
+}
+.gwt-MenuBarPopup .menuPopupMiddleLeft {
+	display: none;
+}
+.gwt-MenuBarPopup .menuPopupMiddleRight {
+	display: none;
+}
+.gwt-MenuBarPopup .menuPopupTopLeftInner {
+	background-color: none;
+}
+.gwt-MenuBarPopup .menuPopupTopRightInner {
+	background-color: none;
+}
+.gwt-MenuBarPopup .menuPopupBottomLeftInner {
+	background-color: none;
+}
+.gwt-MenuBarPopup .menuPopupBottomRightInner {
+	background-color: none;
+}
+.gwt-MenuBarPopup .menuPopupTopLeft {
+	background-color: none;
+}
+.gwt-MenuBarPopup .menuPopupTopRight {
+	background-color: none;
+	background-image: none;	
+}
+.gwt-MenuBarPopup .menuPopupBottomLeft {
+	background-color: none;
+	background-image: none;
+}
+.gwt-MenuBarPopup .menuPopupBottomRight {
+	background-color: none;
+	background-image: none;
+}
+* html .gwt-MenuBarPopup .menuPopupTopLeftInner {
+	background-color: none;
+}
+* html .gwt-MenuBarPopup .menuPopupTopRightInner {
+	background-color: none;
+}
+* html .gwt-MenuBarPopup .menuPopupBottomLeftInner {
+	background-color: none;
+}
+* html .gwt-MenuBarPopup .menuPopupBottomRightInner {
+	background-color: none;
+	display: none;
+}

@@ -1,7 +1,9 @@
 package hu.diplomatervezes.client.mvp;
 
 import hu.diplomatervezes.client.ClientFactory;
+import hu.diplomatervezes.client.activity.SettingsPanelActivity;
 import hu.diplomatervezes.client.activity.StudentPanelActivity;
+import hu.diplomatervezes.client.place.SettingsMenuPlace;
 import hu.diplomatervezes.client.place.StudentListPlace;
 
 import com.google.gwt.activity.shared.Activity;
@@ -20,6 +22,10 @@ public class LeftPanelActiviyMapper implements ActivityMapper {
 		
 		if (place instanceof StudentListPlace) {
 			return new StudentPanelActivity(clientFactory);
+		}
+		
+		else if (place instanceof SettingsMenuPlace) {
+			return new SettingsPanelActivity(clientFactory);
 		}
 		
 		return null;

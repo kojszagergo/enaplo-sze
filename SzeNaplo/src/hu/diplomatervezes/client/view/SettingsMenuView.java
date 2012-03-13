@@ -9,5 +9,6 @@ public interface SettingsMenuView extends IsWidget {
 	public interface Presenter {
 		void onClickNewAnnouncement();
 		void onClickEditAnnouncements();
+		void onClickBack();
 	}
 }

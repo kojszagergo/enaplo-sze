@@ -1,0 +1,19 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.newAnnouncementContainer {
+			padding-top: 20px;
+		}
+	</ui:style>
+	<g:VerticalPanel styleName="style.newAnnouncementContainer">
+		<g:Label text="Bejelentés címe"></g:Label>
+		<g:TextBox ui:field="title"></g:TextBox>
+		<g:Label text="Szöveg"></g:Label>
+		<g:RichTextArea ui:field="body"></g:RichTextArea>
+		<g:HorizontalPanel>
+			<g:PushButton ui:field="saveButton" text="Mentés"></g:PushButton>
+			<g:PushButton ui:field="clearButton" text="Mezők törlése"></g:PushButton>
+		</g:HorizontalPanel>
+	</g:VerticalPanel>
+</ui:UiBinder> 
