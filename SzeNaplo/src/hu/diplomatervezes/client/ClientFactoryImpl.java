@@ -15,7 +15,7 @@ public class ClientFactoryImpl implements ClientFactory {
 	private static final TopPanelView topPanelView = new TopPanelViewImpl();
 	private static final TesztPanel tesztPanel = new TesztPanel();
 	private static final WelcomePage welcomePage = new WelcomePageImpl();
-	
+	private static final SettingsMenuView settingsMenuview = new SettingsMenuViewImpl();
 	
 
 	@Override
@@ -51,6 +51,11 @@ public class ClientFactoryImpl implements ClientFactory {
 	@Override
 	public WelcomePage getWelcomePage() {
 		return welcomePage;
+	}
+
+	@Override
+	public SettingsMenuView getSettingsMenu() {
+		return settingsMenuview;
 	}
 
 }

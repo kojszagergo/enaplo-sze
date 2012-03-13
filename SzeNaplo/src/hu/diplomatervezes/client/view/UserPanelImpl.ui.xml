@@ -3,16 +3,16 @@
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
 	.container {
-		padding-left: 50px;
+		
 	}
-	.icon {
-		background-image: url("/images/checkmark.png");
-		background-repeat: no-repeat;
-
+	.userIcon {
+		padding-left: 20px;
+		padding-right: 5px;
 	}
 	
 	</ui:style>
-	<g:HTMLPanel styleName="{style.container}">
+	<g:HorizontalPanel styleName="{style.container}">
+		<g:Image url="/images/user.png" styleName="{style.userIcon}"></g:Image>
 		<g:MenuBar autoOpen="false" animationEnabled="true" height="25px">
 			<g:MenuItem ui:field="mainMenu">
 				<g:MenuBar vertical="true">
@@ -21,5 +21,5 @@
 				</g:MenuBar>
 			</g:MenuItem>
 		</g:MenuBar>
-	</g:HTMLPanel>
+	</g:HorizontalPanel>
 </ui:UiBinder> 
