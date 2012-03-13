@@ -47,12 +47,11 @@ public class StudentListViewImpl extends Composite implements StudentListView, M
 		initWidget(uiBinder.createAndBindUi(this));
 		
 		studentListPanel.setHeight("600px");
-		
-		
 	}
 
 	@Override
 	public void setStudentList(_SimpleDataBase students) {
+		System.out.println(studentListPanel.getWidgetCount());
 		
 		for (_SimpleSchoolClass schoolClass : students.getIskolaOsztalyok()) {
 			final StudentContainer sc = new StudentContainer();
@@ -69,9 +68,11 @@ public class StudentListViewImpl extends Composite implements StudentListView, M
 					MenuHeader w = (MenuHeader) studentListPanel.getHeaderWidget(studentListPanel.getVisibleIndex());
 					
 					Cell cell = st.getCellForEvent(event);
-					Element e = cell.getElement();
+					//Element e = cell.getElement();
 					int row = cell.getRowIndex();
 					int column = cell.getCellIndex();
+					
+																																			System.out.println("Clicked: " + column);
 					
 					if (column == 0) {
 						CheckBox cb = (CheckBox) st.getWidget(row, column);
@@ -105,6 +106,7 @@ public class StudentListViewImpl extends Composite implements StudentListView, M
 				}
 			studentListPanel.add(sc, new MenuHeader(presenter, this, schoolClass.getGrade()), 30);			
 		}
+		System.out.println(studentListPanel.getWidgetCount());
 	}
 	
 //	@Override
