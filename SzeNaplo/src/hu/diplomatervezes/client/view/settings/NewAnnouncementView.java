@@ -6,6 +6,7 @@ public interface NewAnnouncementView extends IsWidget{
 
 	void clearHeaderText();
 	void clearBodyText();
+	void clearAll();
 	String getHeaderText();
 	String getBodyText();
 	void setPresenter(Presenter presenter);

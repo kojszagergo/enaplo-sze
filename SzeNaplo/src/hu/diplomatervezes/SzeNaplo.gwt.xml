@@ -27,8 +27,6 @@
     <when-type-is class="hu.diplomatervezes.client.ClientFactory"/>
   </replace-with> 
 
-
-
   <!-- Specify the paths for translatable code                    -->
   <source path='client'/>
   <source path='shared'></source>

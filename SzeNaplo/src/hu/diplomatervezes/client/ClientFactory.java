@@ -6,6 +6,7 @@ import hu.diplomatervezes.client.view.StudentListView;
 import hu.diplomatervezes.client.view.TesztPanel;
 import hu.diplomatervezes.client.view.TopPanelView;
 import hu.diplomatervezes.client.view.WelcomePage;
+import hu.diplomatervezes.client.view.settings.NewAnnouncementView;
 
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.place.shared.PlaceController;
@@ -21,5 +22,6 @@ public interface ClientFactory {
 	TesztPanel getTesztPanel(String name);
 	WelcomePage getWelcomePage();
 	SettingsMenuView getSettingsMenu();
+	NewAnnouncementView getNewAnnouncementView();
 	
 }

@@ -1,7 +1,9 @@
 package hu.diplomatervezes.client.mvp;
 
 import hu.diplomatervezes.client.ClientFactory;
+import hu.diplomatervezes.client.activity.NewAnnouncementActivity;
 import hu.diplomatervezes.client.activity.WelcomeActivity;
+import hu.diplomatervezes.client.place.NewAnnouncementPlace;
 import hu.diplomatervezes.client.place.StudentPlace;
 import hu.diplomatervezes.client.place.TopPanelPlace;
 
@@ -25,6 +27,8 @@ public class CenterPanelActivityMapper implements ActivityMapper {
 			return menuActivityMapper.getActivity(place);
 		if (place instanceof TopPanelPlace)
 			return new WelcomeActivity(clientFactory);
+		if (place instanceof NewAnnouncementPlace)
+			return new NewAnnouncementActivity(clientFactory);
 		return null;
 	}
 

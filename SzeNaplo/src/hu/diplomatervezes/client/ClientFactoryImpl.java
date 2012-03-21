@@ -1,10 +1,13 @@
 package hu.diplomatervezes.client;
 
 import hu.diplomatervezes.client.view.*;
+import hu.diplomatervezes.client.view.settings.NewAnnouncementView;
+import hu.diplomatervezes.client.view.settings.NewAnnouncementViewImpl;
 
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.event.shared.SimpleEventBus;
 import com.google.gwt.place.shared.PlaceController;
+import com.sun.org.apache.bcel.internal.generic.RETURN;
 
 public class ClientFactoryImpl implements ClientFactory {
 	
@@ -16,6 +19,7 @@ public class ClientFactoryImpl implements ClientFactory {
 	private static final TesztPanel tesztPanel = new TesztPanel();
 	private static final WelcomePage welcomePage = new WelcomePageImpl();
 	private static final SettingsMenuView settingsMenuview = new SettingsMenuViewImpl();
+	private static final NewAnnouncementView newAnnouncementView = new NewAnnouncementViewImpl();
 	
 
 	@Override
@@ -58,4 +62,8 @@ public class ClientFactoryImpl implements ClientFactory {
 		return settingsMenuview;
 	}
 
+	public NewAnnouncementView getNewAnnouncementView() {
+		return newAnnouncementView;
+	}
+		
 }

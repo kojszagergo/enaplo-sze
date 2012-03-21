@@ -4,13 +4,14 @@
 	<ui:style>
 	.header {
 		font-weight: bold;
-		font-size: x-large;
+		font-size: 15pt;
 		padding-bottom: 5px;
 		border-bottom: 1px solid #eee;
-		width: 500px;
+		width: 600px;
 	}
 	.body {
-		padding-top: 10px;
+		padding-bottom: 20px;
+		width: 600px;
 	}
 	</ui:style>
 	<g:HTMLPanel>

@@ -20,14 +20,15 @@ public class WelcomePageImpl extends Composite implements WelcomePage {
 	interface WelcomePageImplUiBinder extends UiBinder<Widget, WelcomePageImpl> {
 	}
 
+	@UiField VerticalPanel welcomePageContainer;
+	
 	public WelcomePageImpl() {
 		initWidget(uiBinder.createAndBindUi(this));
 	}
 
-	@UiField VerticalPanel welcomePageContainer;
-
 	@Override
 	public void setnews(List<News> news) {
+		
 		if (news != null ) {
 			for (News item : news) {
 				welcomePageContainer.add(new NewsItemImpl(item.getHeaderText(), item.getBodyText()));
