@@ -9,6 +9,7 @@ import javax.jdo.PersistenceManagerFactory;
 import hu.diplomatervezes.client.NewsService;
 import hu.diplomatervezes.shared.News;
 
+import javax.jdo.Query;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
 public class NewsServiceImpl extends RemoteServiceServlet implements
@@ -31,8 +32,17 @@ public class NewsServiceImpl extends RemoteServiceServlet implements
 
 	@Override
 	public List<News> getNews() {
-		// TODO Auto-generated method stub
-		return null;
+		PersistenceManager pm = getPersistenceManager();
+		
+		Query q = pm.newQuery(News.class);
+		q.setOrdering("createDate descending");
+		
+		try {
+			List<News> announcements = (List<News>) q.execute();
+			return (List<News>) pm.detachCopyAll(announcements);
+		} finally {
+			pm.close();
+		}
 	}
 	
 	private PersistenceManager getPersistenceManager() {

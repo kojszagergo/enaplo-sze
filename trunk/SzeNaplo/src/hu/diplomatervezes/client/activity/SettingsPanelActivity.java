@@ -1,6 +1,7 @@
 package hu.diplomatervezes.client.activity;
 
 import hu.diplomatervezes.client.ClientFactory;
+import hu.diplomatervezes.client.place.NewAnnouncementPlace;
 import hu.diplomatervezes.client.place.StudentListPlace;
 import hu.diplomatervezes.client.view.SettingsMenuView;
 
@@ -28,8 +29,7 @@ public class SettingsPanelActivity extends AbstractActivity implements SettingsM
 
 	@Override
 	public void onClickNewAnnouncement() {
-		// TODO Auto-generated method stub
-		
+		placeController.goTo(new NewAnnouncementPlace());
 	}
 
 	@Override
@@ -40,7 +40,6 @@ public class SettingsPanelActivity extends AbstractActivity implements SettingsM
 
 	@Override
 	public void onClickBack() {
-		// TODO Auto-generated method stub
 		placeController.goTo(new StudentListPlace());
 	}
 }

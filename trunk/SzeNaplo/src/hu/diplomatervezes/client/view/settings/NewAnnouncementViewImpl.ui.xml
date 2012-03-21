@@ -2,9 +2,18 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
-		.newAnnouncementContainer {
-			padding-top: 20px;
-		}
+	.newAnnouncementContainer {
+		padding-top: 20px;
+	}
+	.textBoxes {
+		border: none!important;
+		font-family: Arial;
+	}
+	.buttons {
+		padding-right: 10px;
+
+	}
+		
 	</ui:style>
 	<g:VerticalPanel styleName="style.newAnnouncementContainer">
 		<g:Label text="Bejelentés címe"></g:Label>
@@ -13,7 +22,7 @@
 		<g:RichTextArea ui:field="body"></g:RichTextArea>
 		<g:HorizontalPanel>
 			<g:PushButton ui:field="saveButton" text="Mentés"></g:PushButton>
-			<g:PushButton ui:field="clearButton" text="Mezők törlése"></g:PushButton>
+			<g:PushButton ui:field="clearButton" text="Törlés"></g:PushButton>
 		</g:HorizontalPanel>
 	</g:VerticalPanel>
 </ui:UiBinder> 

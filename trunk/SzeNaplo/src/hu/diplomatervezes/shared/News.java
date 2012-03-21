@@ -1,5 +1,6 @@
 package hu.diplomatervezes.shared;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.jdo.annotations.IdGeneratorStrategy;
@@ -9,11 +10,11 @@ import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
 @PersistenceCapable(identityType = IdentityType.APPLICATION)
-public class News {
+public class News implements Serializable{
 	
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-	private long id;
+	private Long id;
 	
 	@Persistent
 	private Date createDate;
@@ -54,7 +55,7 @@ public class News {
 		return createDate;
 	}
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 }

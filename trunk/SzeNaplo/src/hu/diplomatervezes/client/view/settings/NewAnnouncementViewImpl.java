@@ -8,6 +8,7 @@ import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.PushButton;
 import com.google.gwt.user.client.ui.RichTextArea;
+import com.google.gwt.user.client.ui.RichTextArea.BasicFormatter;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
 
@@ -28,7 +29,7 @@ public class NewAnnouncementViewImpl extends Composite implements NewAnnouncemen
 	
 	public NewAnnouncementViewImpl() {
 		initWidget(uiBinder.createAndBindUi(this));
-//Fókusz
+		title.setFocus(true);
 	}
 
 	@UiHandler("saveButton")
@@ -38,8 +39,7 @@ public class NewAnnouncementViewImpl extends Composite implements NewAnnouncemen
 	
 	@UiHandler("clearButton")
 	void onClickClearButton(ClickEvent e) {
-		clearHeaderText();
-		clearBodyText();
+		clearAll();
 	}
 	
 	@Override
@@ -66,5 +66,11 @@ public class NewAnnouncementViewImpl extends Composite implements NewAnnouncemen
 	@Override
 	public void clearBodyText() {
 		body.setText("");
+	}
+
+	@Override
+	public void clearAll() {
+		clearHeaderText();
+		clearBodyText();
 	}
 }

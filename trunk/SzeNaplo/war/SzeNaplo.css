@@ -236,3 +236,10 @@ p{
 	background-color: none;
 	display: none;
 }
+
+.gwt-RichTextArea {
+  border: 1px solid #ccc;
+  border-top: 1px solid #999;
+  font-size: small;
+  font-family: Arial Unicode MS, Arial, sans-serif;
+}
