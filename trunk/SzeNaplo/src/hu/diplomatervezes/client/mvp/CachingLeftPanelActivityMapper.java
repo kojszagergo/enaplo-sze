@@ -1,6 +1,8 @@
 package hu.diplomatervezes.client.mvp;
 
 import hu.diplomatervezes.client.ClientFactory;
+import hu.diplomatervezes.client.place.NewAnnouncementPlace;
+import hu.diplomatervezes.client.place.SettingsMenuPlace;
 import hu.diplomatervezes.client.place.StudentDetailPlace;
 import hu.diplomatervezes.client.place.StudentListPlace;
 
@@ -20,7 +22,14 @@ public class CachingLeftPanelActivityMapper implements ActivityMapper {
 			
 			@Override
 			public Place filter(Place place) {
-				return place instanceof StudentDetailPlace ? new StudentListPlace() : place;
+				if (place instanceof StudentDetailPlace)
+					return new StudentListPlace();
+				else if (place instanceof NewAnnouncementPlace)
+					return new SettingsMenuPlace();
+				else return place;
+					
+				
+				//return place instanceof StudentDetailPlace ? new StudentListPlace() : place;
 			}
 		};
 		
