@@ -8,7 +8,7 @@
 			height: auto;
 		}
 		
-		.menuButtonContainer {
+		.menuTopContainer {
 			height: 40px;
 			width: 280px;
 
@@ -27,8 +27,7 @@
 		}
 	</ui:style>
 	<g:VerticalPanel>
-		<g:HorizontalPanel ui:field="menuButtonContainer" styleName="{style.menuButtonContainer}">
-			<g:Label>Hello</g:Label>
+		<g:HorizontalPanel ui:field="menuTopContainer" styleName="{style.menuTopContainer}">
 		</g:HorizontalPanel>
 		<g:VerticalPanel styleName="{style.menuContener}">	
 			<g:StackLayoutPanel unit="PX" ui:field="studentListPanel"></g:StackLayoutPanel>
