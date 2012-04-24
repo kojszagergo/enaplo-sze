@@ -19,6 +19,9 @@
 		font-size: 13pt;
 		vertical-align: top;
 	}
+	.link {
+		cursor: pointer;
+	}
 
 	</ui:style>
 	<g:VerticalPanel ui:field="settingsMenuContainer" styleName="{style.settingsMenuContener}">
@@ -48,7 +51,7 @@
 		</g:StackLayoutPanel>
 		<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE">
 			<g:Image url="/images/back.png"></g:Image>
-			<g:Label ui:field="backLink" text="Viszza" styleName="{style.footer}"></g:Label>			
+			<g:Label ui:field="backLink" text="Vissza" styleName="{style.footer}"></g:Label>			
 		</g:HorizontalPanel>		
 		
 	</g:VerticalPanel>

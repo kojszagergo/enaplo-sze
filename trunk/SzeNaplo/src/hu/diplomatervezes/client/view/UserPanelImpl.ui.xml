@@ -12,7 +12,7 @@
 	
 	</ui:style>
 	<g:HorizontalPanel styleName="{style.container}">
-		<g:Image url="/images/user.png" styleName="{style.userIcon}"></g:Image>
+		<g:Image url="/images/home.png" styleName="{style.userIcon}"></g:Image>
 		<g:MenuBar autoOpen="false" animationEnabled="true" height="25px">
 			<g:MenuItem ui:field="mainMenu">
 				<g:MenuBar vertical="true">
