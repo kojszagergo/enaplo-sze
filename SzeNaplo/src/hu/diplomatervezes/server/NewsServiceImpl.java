@@ -14,13 +14,11 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
 public class NewsServiceImpl extends RemoteServiceServlet implements
 		NewsService {
-
-	private static final PersistenceManagerFactory PMF =
-		      JDOHelper.getPersistenceManagerFactory("transactions-optional");
 	
 	@Override
 	public void addNews(String headerText, String bodyText) {
-		PersistenceManager pm = getPersistenceManager();
+		
+		PersistenceManager pm = PMF.get().getPersistenceManager();
 		
 		try {
 			pm.makePersistent(new News(headerText, bodyText));
@@ -32,7 +30,8 @@ public class NewsServiceImpl extends RemoteServiceServlet implements
 
 	@Override
 	public List<News> getNews() {
-		PersistenceManager pm = getPersistenceManager();
+		
+		PersistenceManager pm = PMF.get().getPersistenceManager();
 		
 		Query q = pm.newQuery(News.class);
 		q.setOrdering("createDate descending");
@@ -44,8 +43,4 @@ public class NewsServiceImpl extends RemoteServiceServlet implements
 			pm.close();
 		}
 	}
-	
-	private PersistenceManager getPersistenceManager() {
-	    return PMF.getPersistenceManager();
-	  }
 }

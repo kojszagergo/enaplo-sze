@@ -8,5 +8,6 @@ public interface NewStudentView extends IsWidget {
 	
 	public interface Presenter {
 		void saveNewStudent();
+		void cancelNewStudent();
 	}
 }
