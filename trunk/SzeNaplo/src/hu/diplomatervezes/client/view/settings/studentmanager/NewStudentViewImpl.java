@@ -57,4 +57,9 @@ public class NewStudentViewImpl extends Composite implements NewStudentView, Edi
 	void onClickHozzaad(ClickEvent e) {
 		presenter.saveNewStudent();
 	}
+	
+	@UiHandler("cancelButton")
+	void onClickCancel(ClickEvent e) {
+		presenter.cancelNewStudent();
+	}
 }
