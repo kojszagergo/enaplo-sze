@@ -2,6 +2,7 @@ package hu.diplomatervezes.client.activity;
 
 import hu.diplomatervezes.client.ClientFactory;
 import hu.diplomatervezes.client.place.NewAnnouncementPlace;
+import hu.diplomatervezes.client.place.NewStudentPlace;
 import hu.diplomatervezes.client.place.StudentListPlace;
 import hu.diplomatervezes.client.view.SettingsMenuView;
 
@@ -41,5 +42,11 @@ public class SettingsPanelActivity extends AbstractActivity implements SettingsM
 	@Override
 	public void onClickBack() {
 		placeController.goTo(new StudentListPlace());
+	}
+
+	@Override
+	public void onClickNewStudent() {
+		// TODO Auto-generated method stub
+		placeController.goTo(new NewStudentPlace());
 	}
 }

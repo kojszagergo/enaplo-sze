@@ -41,13 +41,22 @@
 			</g:stack>
 			<g:stack>
 				<g:customHeader size="30">
-					<g:Label>Kezelés</g:Label>
+					<g:Label>Tanuló kezelés</g:Label>
 				</g:customHeader>
 				<g:VerticalPanel>
-					<g:Anchor ui:field="studentManagement">Tanulók kezelése</g:Anchor>
-					<g:Anchor ui:field="classManagement">Osztályok kezelése</g:Anchor>
+					<g:Anchor ui:field="newStudentLink">Tanuló felvétele</g:Anchor>
+					<g:Anchor ui:field="editStudentLink">Adatmódosítás</g:Anchor>
 				</g:VerticalPanel>
-			</g:stack>		
+			</g:stack>
+			<g:stack>
+				<g:customHeader size="30">
+					<g:Label>Osztály kezelés</g:Label>
+				</g:customHeader>
+				<g:VerticalPanel>
+					<g:Anchor ui:field="newClassLink">Osztály felvétele</g:Anchor>
+					<g:Anchor ui:field="editClassLink">Adatmódosítás</g:Anchor>
+				</g:VerticalPanel>
+			</g:stack>			
 		</g:StackLayoutPanel>
 		<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE">
 			<g:Image url="/images/back.png"></g:Image>
