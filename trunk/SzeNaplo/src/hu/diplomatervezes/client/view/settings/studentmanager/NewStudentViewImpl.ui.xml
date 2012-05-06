@@ -1,0 +1,60 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:dp="urn:import:com.google.gwt.user.datepicker.client">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<table>
+			<tr>
+				<td>Vezetéknév</td>
+				<td><g:TextBox ui:field="vezetekNev"></g:TextBox></td>
+			</tr>
+			<tr>	
+				<td>Keresztnév</td>
+				<td><g:TextBox ui:field="keresztNev"></g:TextBox></td>
+			</tr>
+			<tr>	
+				<td>Született</td>
+				<td><dp:DateBox ui:field="szuletesiDatum"></dp:DateBox></td>
+			</tr>
+			<tr>	
+				<td>Neme</td>
+				<td>
+					<g:ListBox ui:field="neme">
+						<g:item value="1">
+			    			fiú
+			  			</g:item>
+			  			<g:item value="2">
+			 				lány
+			 			</g:item>
+					</g:ListBox>
+				</td>	
+			</tr>
+			<tr>
+				<td>Irányítószám</td>
+				<td><g:TextBox ui:field="iranyitoSzam"></g:TextBox></td>
+			</tr>
+			<tr>	
+				<td>Város</td>
+				<td><g:TextBox ui:field="varos"></g:TextBox></td>
+			</tr>
+			<tr>	
+				<td>Utca, házszám</td>
+				<td><g:TextBox ui:field="utca"></g:TextBox></td>
+			</tr>
+			<tr>	
+				<td>Anyja neve</td>
+				<td><g:TextBox ui:field="anyjaNeve"></g:TextBox></td>				
+			</tr>
+			<tr>
+				<td><g:PushButton ui:field="newStudentButton" text="Hozzáad"></g:PushButton></td>
+				<td><g:PushButton ui:field="cancelButton" text="Mégsem"></g:PushButton></td>
+			</tr>
+		
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

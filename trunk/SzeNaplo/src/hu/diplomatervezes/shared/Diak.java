@@ -26,7 +26,7 @@ public class Diak implements Serializable {
 	@Persistent
 	private Date szuletesiDatum;
 	@Persistent
-	private String nem;
+	private int neme;
 	@Persistent
 	private String iranyitoSzam;
 	@Persistent
@@ -41,12 +41,12 @@ public class Diak implements Serializable {
 	public Diak() {	}
 	//kesobb javitani, optimalizalni
 	public Diak(String vezetekNev, String keresztNev,
-			Date szuletesiDatum, String nem, String iranyitoSzam, String varos,
+			Date szuletesiDatum, int neme, String iranyitoSzam, String varos,
 			String utca, String anyjaNeve, int version) {
 		this.vezetekNev = vezetekNev;
 		this.keresztNev = keresztNev;
 		this.szuletesiDatum = szuletesiDatum;
-		this.nem = nem;
+		this.neme = neme;
 		this.iranyitoSzam = iranyitoSzam;
 		this.varos = varos;
 		this.utca = utca;
@@ -78,12 +78,12 @@ public class Diak implements Serializable {
 		this.szuletesiDatum = szuletesiDatum;
 	}
 
-	public String getNem() {
-		return nem;
+	public int getNeme() {
+		return neme;
 	}
 
-	public void setNem(String nem) {
-		this.nem = nem;
+	public void setNeme(int neme) {
+		this.neme = neme;
 	}
 
 	public String getIranyitoSzam() {

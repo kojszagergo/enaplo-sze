@@ -23,6 +23,12 @@ public class SettingsMenuViewImpl extends Composite implements SettingsMenuView{
 	@UiField VerticalPanel settingsMenuContainer;
 	@UiField Label backLink; 
 	@UiField Anchor newAnnouncementLink;
+	
+	@UiField Anchor newStudentLink;
+	@UiField Anchor editStudentLink;
+	@UiField Anchor newClassLink;
+	@UiField Anchor editClassLink;
+	
 	private Presenter presenter;
 	
 	public SettingsMenuViewImpl() {
@@ -42,5 +48,10 @@ public class SettingsMenuViewImpl extends Composite implements SettingsMenuView{
 	@UiHandler("newAnnouncementLink")
 	void onClickNewAnnouncement(ClickEvent e) {
 		presenter.onClickNewAnnouncement();
+	}
+	
+	@UiHandler("newStudentLink")
+	void onClickNewStudent(ClickEvent e) {
+		presenter.onClickNewStudent();
 	}
 }

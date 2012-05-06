@@ -5,7 +5,6 @@ import com.google.gwt.place.shared.PlaceTokenizer;
 public class NewAnnouncementPlace extends SettingsPlace {
 
 	public NewAnnouncementPlace() {
-		
 	}
 	
 	public static class Tokenizer implements PlaceTokenizer<NewAnnouncementPlace> {

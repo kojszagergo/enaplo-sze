@@ -2,8 +2,10 @@ package hu.diplomatervezes.client.mvp;
 
 import hu.diplomatervezes.client.ClientFactory;
 import hu.diplomatervezes.client.activity.NewAnnouncementActivity;
+import hu.diplomatervezes.client.activity.NewStudentActivity;
 import hu.diplomatervezes.client.activity.WelcomeActivity;
 import hu.diplomatervezes.client.place.NewAnnouncementPlace;
+import hu.diplomatervezes.client.place.NewStudentPlace;
 import hu.diplomatervezes.client.place.StudentPlace;
 import hu.diplomatervezes.client.place.TopPanelPlace;
 
@@ -29,6 +31,8 @@ public class CenterPanelActivityMapper implements ActivityMapper {
 			return new WelcomeActivity(clientFactory);
 		if (place instanceof NewAnnouncementPlace)
 			return new NewAnnouncementActivity(clientFactory);
+		if (place instanceof NewStudentPlace)
+			return new NewStudentActivity(clientFactory);
 		return null;
 	}
 
