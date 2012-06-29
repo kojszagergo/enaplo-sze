@@ -26,6 +26,15 @@
     <url-pattern>/szenaplo/news</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <servlet-name>studentServlet</servlet-name>
+    <servlet-class>hu.diplomatervezes.server.StudentServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>studentServlet</servlet-name>
+    <url-pattern>/szenaplo/studentService</url-pattern>
+  </servlet-mapping> 
     
   <!-- Default page to serve -->
   <welcome-file-list>
