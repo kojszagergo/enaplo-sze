@@ -2,11 +2,9 @@ package hu.diplomatervezes.client.mvp;
 
 import hu.diplomatervezes.client.ClientFactory;
 import hu.diplomatervezes.client.activity.StudentDetailActivity;
-import hu.diplomatervezes.client.activity.StudentPanelActivity;
 import hu.diplomatervezes.client.activity.WelcomeActivity;
 import hu.diplomatervezes.client.place.StudentDetailPlace;
 import hu.diplomatervezes.client.place.StudentListPlace;
-import hu.diplomatervezes.client.place.WelcomePlace;
 
 import com.google.gwt.activity.shared.Activity;
 import com.google.gwt.activity.shared.ActivityMapper;

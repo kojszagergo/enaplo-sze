@@ -34,7 +34,6 @@ public class TopPanelViewImpl extends Composite implements TopPanelView {
 	
 	@UiHandler("loginButton")
 	void onclick(ClickEvent e) {
-		Window.alert("Clicked!");
 		Window.Location.assign(loginUrl);
 		
 	}

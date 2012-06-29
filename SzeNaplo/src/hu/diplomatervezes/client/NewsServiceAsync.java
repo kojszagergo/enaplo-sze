@@ -10,7 +10,5 @@ public interface NewsServiceAsync {
 
 	void addNews(String headerText, String bodyText,
 			AsyncCallback<Void> callback);
-
 	void getNews(AsyncCallback<List<News>> callback);
-
 }

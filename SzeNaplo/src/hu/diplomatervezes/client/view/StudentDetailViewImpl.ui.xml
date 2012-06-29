@@ -6,6 +6,32 @@
 			background-color: #fff;
 		}
 		
+		.containerMainTop {
+			background-color: #eee;
+			height: 105px;
+			width: 500px;
+			padding: 10px 0px 10px 10px;
+			border-bottom: 1px solid #ccc;
+
+		}
+		
+		.containerMenuTop {
+			background-color: #eee;
+			border-left: 1px solid #ccc;
+			border-bottom: 1px solid #ccc;
+			padding: 10px 6px;
+			width: 140px;
+			height: 105px;
+		}
+			
+		.containerMenuBottom {
+			background-color: #fff;
+			border-left: 1px solid #ccc;
+			border-bottom: 1px solid #ccc;
+			padding: 10px 6px;
+			width: 140px;
+		}
+		
 		.nameLabel {
 			font-size: 16pt;
 			min-width: 220px;
@@ -13,28 +39,54 @@
 		.sListbox {
 			min-width: 150px;
 			height: 27px;
-			padding: 3px 3px;
+			margin: 5px 0px;
+			padding: 1px 1px;
 		}
+		
+		.eredmenyek {
+			font-size: 16pt;
+			font-weight: bold;
 
+		}
 	</ui:style>
 	
-	<g:VerticalPanel styleName="{style.container}">
-		<g:HorizontalPanel ui:field="studentDetailHeader">
-			<g:Label styleName="{style.nameLabel}" ui:field="nameLabel"></g:Label>
-			<g:ListBox styleName="{style.sListbox}" ui:field="subjects"/>
-			<g:PushButton text="SETTINGS" styleName="gwt-SettingshButton"/>
-		</g:HorizontalPanel>
+	<g:HorizontalPanel styleName="{style.container}">
+		<g:VerticalPanel ui:field="mainSection">
+			<g:VerticalPanel ui:field="top" styleName="{style.containerMainTop}">
+				<g:Label styleName="{style.nameLabel}" ui:field="nameLabel"></g:Label>
+				<g:cell>
+					<g:Label  text="Tárgy választás:"/>
+				</g:cell>
+				<g:cell>
+					<g:ListBox styleName="{style.sListbox}" ui:field="subjects">
+						<g:item value="0">Matematika</g:item>
+						<g:item value="1">Fizika</g:item>
+						<g:item value="2">Irodalom</g:item>
+						<g:item value="3">Földrajz</g:item>
+						<g:item value="4">Történelem</g:item>
+						<g:item value="5">Kémia</g:item>
+					</g:ListBox>
+				</g:cell>
+			</g:VerticalPanel>
+			<g:VerticalPanel ui:field="middle" horizontalAlignment="center"></g:VerticalPanel>
+			<g:VerticalPanel ui:field="bottom"></g:VerticalPanel>
+		</g:VerticalPanel>
 		
 		
-		<g:HorizontalPanel>
-			<g:VerticalPanel ui:field="studentDetailLeft">
-				<g:PushButton text="JEGYBEÍRÁS" ui:field="newButton"/>
-				<g:Label text="ÉRDEMJEGYEK"/>
-				<g:FlexTable ui:field="studentCredits"/></g:VerticalPanel>
-			<g:VerticalPanel ui:field="studentDetailRight"></g:VerticalPanel>
-		</g:HorizontalPanel>
-		<g:VerticalPanel ui:field="studentDetailFooter">
-			<g:FlexTable ui:field="privateData"/></g:VerticalPanel>
-	</g:VerticalPanel>
+		<g:VerticalPanel>
+			<g:VerticalPanel ui:field="menuSectionTop" styleName="{style.containerMenuTop}">
+				<g:PushButton text="Adatok szerkesztése" />
+				<g:PushButton text="Jegybeírás" />
+			</g:VerticalPanel>
+			<g:VerticalPanel ui:field="menuSectionBottom" styleName="{style.containerMenuBottom}">
+				<g:Label text="Jegyek száma:" />
+				<g:Label ui:field="jegyekSzama" styleName="{style.eredmenyek}"/>
+				<g:Label text="Tantárgyi átlag:" />
+				<g:Label ui:field="tantargyiAtlag"  styleName="{style.eredmenyek}"/>
+			</g:VerticalPanel>
+
+		</g:VerticalPanel>
+	
+	</g:HorizontalPanel>
 	
 </ui:UiBinder> 

@@ -82,7 +82,6 @@ public class _SimpleDataBase {
 	  private _SimpleDataBase() {
 		  schoolClasses = getSchoolClasses();
 	  }
-
 	  
 	  private static _SimpleDataBase instance;
 	  
