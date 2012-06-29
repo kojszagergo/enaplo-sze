@@ -3,6 +3,8 @@ package hu.diplomatervezes.client.activity;
 import hu.diplomatervezes.client.ClientFactory;
 import hu.diplomatervezes.client.place.StudentDetailPlace;
 import hu.diplomatervezes.client.view.StudentDetailView;
+import hu.diplomatervezes.client.view.StudentDetailViewImpl;
+import hu.diplomatervezes.shared._RatingGen;
 
 import com.google.gwt.activity.shared.AbstractActivity;
 import com.google.gwt.event.shared.EventBus;
@@ -18,7 +20,7 @@ public class StudentDetailActivity extends AbstractActivity implements StudentDe
 	private String className;
 	
 	public StudentDetailActivity(StudentDetailPlace place, ClientFactory clientFactory) {
-		view = clientFactory.getStudentDetailView();
+		view = new StudentDetailViewImpl();
 		placeController = clientFactory.getPlaceController();
 		className = (place == null) ? "Üres" : place.getName();
 	}
@@ -29,10 +31,20 @@ public class StudentDetailActivity extends AbstractActivity implements StudentDe
 		view.setData(className);
 		panel.setWidget(view.asWidget());
 	}
-
-	@Override
+	
+	public void onStop() {
+		
+	}
+	
+	
+	
 	public void goTo(Place place) {
 		// TODO Auto-generated method stub
 		placeController.goTo(place);
+	}
+
+	@Override
+	public void getJegyek(String subject) {
+		view.setSubjectChart(_RatingGen.get());
 	}
 }
