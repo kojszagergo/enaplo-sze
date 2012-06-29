@@ -7,7 +7,6 @@ import hu.diplomatervezes.client.view.settings.NewAnnouncementViewImpl;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.event.shared.SimpleEventBus;
 import com.google.gwt.place.shared.PlaceController;
-import com.sun.org.apache.bcel.internal.generic.RETURN;
 
 public class ClientFactoryImpl implements ClientFactory {
 	

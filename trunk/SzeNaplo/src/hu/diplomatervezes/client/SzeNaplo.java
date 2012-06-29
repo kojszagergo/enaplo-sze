@@ -53,6 +53,7 @@ public class SzeNaplo implements EntryPoint {
 		});
 	}
 
+	@SuppressWarnings("deprecation")
 	private void loadSzeNaplo() {
 		ClientFactory clientFactory = GWT.create(ClientFactoryImpl.class);
 		EventBus eventBus = clientFactory.getEventBus();
@@ -85,9 +86,9 @@ public class SzeNaplo implements EntryPoint {
 		
 		historyHandler.handleCurrentHistory();
 		
-		//scroll();
+//		scroll();
 	}
-	
+//		jQuery beillesztése a scrollbar cseréjéhez	
 	public static native void scroll()	/*-{
 	$wnd.$('.tesztScroll').jScrollPane();	
 }-*/;

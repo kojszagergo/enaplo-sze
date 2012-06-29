@@ -2,6 +2,7 @@ package hu.diplomatervezes.client;
 
 import java.io.Serializable;
 
+@SuppressWarnings("serial")
 public class LoginInfo implements Serializable {
 
 	private boolean loggedIn = false;
@@ -49,9 +50,4 @@ public class LoginInfo implements Serializable {
 	public void setNickName(String nickName) {
 		this.nickName = nickName;
 	}
-	
-	
-	
-	
-	
 }

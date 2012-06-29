@@ -23,9 +23,6 @@ public class AppController implements Presenter, ValueChangeHandler<String> {
 	
 	private void bind() {
 		History.addValueChangeHandler(this);
-		
-		//eseménybusz események
-		
 	}
 
 	@Override

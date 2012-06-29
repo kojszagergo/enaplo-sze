@@ -24,7 +24,7 @@
 		background-color: #fff;
 		margin-top: 40px;
 		margin-left: 1px;
-		padding: 20px;
+		padding: 0px;
 		width: 640px;
 		height: auto;
 		position: relative;
@@ -45,8 +45,5 @@
 			<g:SimplePanel styleName="{style.mainPanel}" ui:field="centerPanel">
 			</g:SimplePanel>
 		</g:center>
-	
-	
-	
 	</g:DockLayoutPanel>
 </ui:UiBinder> 

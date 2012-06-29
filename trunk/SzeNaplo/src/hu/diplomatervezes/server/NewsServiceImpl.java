@@ -10,6 +10,8 @@ import hu.diplomatervezes.client.NewsService;
 import hu.diplomatervezes.shared.News;
 
 import javax.jdo.Query;
+
+import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
 public class NewsServiceImpl extends RemoteServiceServlet implements
@@ -38,6 +40,8 @@ public class NewsServiceImpl extends RemoteServiceServlet implements
 		
 		try {
 			List<News> announcements = (List<News>) q.execute();
+			System.out.print("System.out.println készült");
+			GWT.log("GWT.log készült");
 			return (List<News>) pm.detachCopyAll(announcements);
 		} finally {
 			pm.close();

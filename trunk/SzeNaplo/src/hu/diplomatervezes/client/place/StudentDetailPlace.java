@@ -15,7 +15,7 @@ public class StudentDetailPlace extends StudentPlace {
 		return name;
 	}
 	
-	@Prefix("contact")
+	@Prefix("student")
 	public static class Tokenizer implements PlaceTokenizer<StudentDetailPlace> {
 
 		@Override
